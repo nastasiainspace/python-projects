@@ -1,0 +1,22 @@
+tasks = {
+
+}
+
+run = True
+
+while run:
+    command = input("Введите команду: ")
+    if command == "add":
+        date = input("Введите дату: ")
+        task = input("Введите задачу: ")
+        if date in tasks:
+            tasks[date].append(task)
+        else:
+            tasks[date] = []
+            tasks[date].append(task)
+        print("Задача", task, "добавлена")
+    elif command == "show":
+        print(tasks)
+    elif command == "exit":
+        print("Спасибо за использование! До свидания!")
+        break
