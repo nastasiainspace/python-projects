@@ -1,0 +1,15 @@
+tasks = []
+
+run = True
+
+while run:
+    command = input("Введите команду: ")
+    if command == "todo":
+        task = input("Введите задачу: ")
+        tasks.append(task)
+        print("Задача", task, "добавлена")
+    elif command == "show":
+        print(tasks)
+    elif command == "exit":
+        print("Спасибо за использование! До свидания!")
+        break
